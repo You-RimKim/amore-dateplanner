@@ -1,6 +1,34 @@
 
-    <form id="questionnaireForm">
-<h1>Your inputs!</h1>
-    </form>
-    <script src="questionnaire.js"></script>
 
+<div class="input-form">
+  <div class="card">
+    <div class="title">Choose your preferences</div>
+    <form action="/questionnaire" id="questionnaireForm" method="post">
+      <p>Do you prefer outdoor activities?</p>
+      <label><input type="radio" class="" name="outdoor_or_indoor"> Hiking</label>
+      <br>
+      <p> or indoor activities?</p>
+      <label><input type="radio" class="" name="outdoor_or_indoor">movies</label>
+      <br>
+      <p>How adventurous are you feeling today?</p>
+      <label><input type="radio" class="" name="adventure_level">Somewhat</label>
+      <label><input type="radio" class="" name="adventure_level">Very</label>
+      <label><input type="radio" class="" name="adventure_level">Not at all</label>
+      <br>
+      <p>What's your preferred budget range for this date?</p>
+      <label><input type="radio" class="" name="cuisine_preference">High</label>
+      <label><input type="radio" class="" name="cuisine_preference">Medium</label>
+      <label><input type="radio" class="" name="cuisine_preference">Low</label>
+      <br>
+      <p>How long would you like the date to last?</p>
+        <label><input type="radio" class="" name="cuisine_preference">Few Hours</label>
+        <label><input type="radio" class="" name="cuisine_preference">Half Day</label>
+        <label><input type="radio" class="" name="cuisine_preference">Weekend</label>
+
+
+
+      <input type="submit" value="Submit" />
+
+
+  </div>
+</div>
