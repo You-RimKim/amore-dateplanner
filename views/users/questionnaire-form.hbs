@@ -1,34 +1,64 @@
-
-
 <div class="input-form">
   <div class="card">
     <div class="title">Choose your preferences</div>
     <form action="/questionnaire" id="questionnaireForm" method="post">
-      <p>Do you prefer outdoor activities?</p>
-      <label><input type="radio" class="" name="outdoor_or_indoor"> Hiking</label>
-      <br>
-      <p> or indoor activities?</p>
-      <label><input type="radio" class="" name="outdoor_or_indoor">movies</label>
-      <br>
-      <p>How adventurous are you feeling today?</p>
-      <label><input type="radio" class="" name="adventure_level">Somewhat</label>
-      <label><input type="radio" class="" name="adventure_level">Very</label>
-      <label><input type="radio" class="" name="adventure_level">Not at all</label>
-      <br>
-      <p>What's your preferred budget range for this date?</p>
-      <label><input type="radio" class="" name="cuisine_preference">High</label>
-      <label><input type="radio" class="" name="cuisine_preference">Medium</label>
-      <label><input type="radio" class="" name="cuisine_preference">Low</label>
-      <br>
-      <p>How long would you like the date to last?</p>
-        <label><input type="radio" class="" name="cuisine_preference">Few Hours</label>
-        <label><input type="radio" class="" name="cuisine_preference">Half Day</label>
-        <label><input type="radio" class="" name="cuisine_preference">Weekend</label>
-
-
-
-      <input type="submit" value="Submit" />
-
-
+      <div class="question">
+        <p>Do you prefer outdoor activities?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="outdoor_or_indoor">
+          <label for="hiking">Hiking</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="outdoor_or_indoor">
+          <label for="movies">Movies</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>How adventurous are you feeling today?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventure_level">
+          <label for="somewhat">Somewhat</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventure_level">
+          <label for="very">Very</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventure_level">
+          <label for="not-at-all">Not at all</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>What's your preferred budget range for this date?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget">
+          <label for="high">High</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget">
+          <label for="medium">Medium</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget">
+          <label for="low">Low</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>How long would you like the date to last?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="activity_duration">
+          <label for="few-hours">Few Hours</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="activity_duration">
+          <label for="half-day">Half Day</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="activity_duration">
+          <label for="weekend">Weekend</label>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
   </div>
 </div>

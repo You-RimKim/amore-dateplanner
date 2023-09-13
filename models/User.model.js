@@ -24,28 +24,24 @@ const userSchema = new Schema(
     },
     outdoor_or_indoor: {
       type: String,
+      require: [true]
     },
     adventure_level: {
       type: String,
+      require: [true]
     },
-    nightlife_type: {
-      type: String,
-    },
-    cuisine_preference: {
-      type: String,
-    },
-    activity_duration: {
-      type: String,
-    },
-    romantic_or_casual: {
-      type: String,
-    },
+
     budget: {
       type: String,
+      require: [true]
     },
-    interests_hobbies: {
+
+    activity_duration: {
       type: String,
-    }
+      require: [true]
+
+    },
+
   },
   {
     timestamps: true
