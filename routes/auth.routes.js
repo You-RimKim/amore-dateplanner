@@ -20,10 +20,9 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
   res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
-
-
-
 router.get('/login', (req, res) => res.render('auth/login'));
+
+router.get('/datesuggestions', isLoggedIn, (req, res) => res.render('users/datesuggestions'));
 
 // POST route ==> to process form data
 
