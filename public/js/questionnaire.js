@@ -1,6 +1,9 @@
+
+
 document.getElementById('questionnaireForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
+    // Collect user responses from the form
     const outdoorOrIndoor = prompt("Do you prefer outdoor activities (e.g., hiking) or indoor activities (e.g., movies)?");
     const adventureLevel = prompt("How adventurous are you feeling today? (Options: Not at all, Somewhat, Very)");
     const nightlifeType = nightlifePreference === "Yes" ? prompt("What type of nightlife activities do you enjoy? (e.g., clubbing, live music)") : null;
@@ -21,7 +24,7 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
         interests_hobbies: interestsHobbies,
     };
 
-    
+
     // Send the userResponses object to your Node.js backend using an HTTP request (e.g., AJAX or fetch)
 
 
