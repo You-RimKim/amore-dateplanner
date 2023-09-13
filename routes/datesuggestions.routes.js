@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/date-suggestions', (req, res) => res.render('users/date-suggestions'));
+router.get('/datesuggestions', (req, res) => res.render('users/datesuggestions'));
 
 module.exports = router;
