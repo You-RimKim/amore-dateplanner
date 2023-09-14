@@ -22,7 +22,7 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
 
 router.get('/login', (req, res) => res.render('auth/login'));
 
-router.get('/datesuggestions', isLoggedIn, (req, res) => res.render('users/datesuggestions'));
+// router.get('/datesuggestions', isLoggedIn, (req, res) => res.render('users/datesuggestions'));
 
 // POST route ==> to process form data
 
@@ -127,10 +127,10 @@ router.get('/questionnaire', (req, res) => {
 });
 
 
-router.post('/questionnaire', (req, res) => {
-  console.log(req.body)
+// router.post('/questionnaire', (req, res) => {
+//   console.log(req.body)
 
-});
+// });
 
 
 
