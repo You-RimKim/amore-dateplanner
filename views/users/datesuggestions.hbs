@@ -1,13 +1,13 @@
-{{#if userInSession}}
-<h2>Hi, {{ userInSession.username }}!</h2>
-<p>Here are your date ideas</p>
-<button>
-    <a href="/userProfile">Reload the page</a>
-</button>
-{{> categorizedDateIdeas}}
-{{else}}
+<h1>Date Suggestions</h1>
 
-<br>
-<p>You need to log in!</p>
-
-{{/if}}
+<ul>
+  {{#each dateIdeas}}
+  <li>
+    <h2>{{this.dateIdea}}</h2>
+    <p>Location: {{this.location}}</p>
+    <p>Adventure Level: {{this.adventurelevel}}</p>
+    <p>Budget: {{this.budget}}</p>
+    <p>Duration: {{this.duration}}</p>
+  </li>
+  {{/each}}
+</ul>
