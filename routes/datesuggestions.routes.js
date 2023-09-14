@@ -1,28 +1,28 @@
+const mongoose = require('mongoose');
+const User = require('../models/User.model');
 const express = require('express');
+const Ideas = require('../models/Ideas.model');
 const router = express.Router();
 
-router.get('/datesuggestions', (req, res) => res.render('users/datesuggestions'));
+router.post('/questionnaire', (req, res, next) => {
+  console.log(req.body)
+
+  User.findByIdAndUpdate(req.session.currentUser._id, {
+    questionnaire: req.body
+  }, { new: true })
+  .then((updatedUser) => {
+    const {
+    location,
+    adventurelevel,
+    budget,
+    duration
+  } = updatedUser.questionnaire
+    console.log(updatedUser.questionnaire)
+    Ideas.find({ adventurelevel: adventurelevel, budget: budget, duration: duration })
+    .then((foundIdeas) => res.render('users/datesuggestions', {dateIdeas: foundIdeas}))
+  })
 
 
-const Ideas = require('../bin/seeds');
-
-const categorizedDateIdeas = {};
-
-for (const idea of Ideas) {
-    const { budget, location, duration } = idea;
-    const categoryKey = `${budget.toLowerCase()}${location.toLowerCase()}${duration.split(' ').join('')}`;
-
-    if (!categorizedDateIdeas[categoryKey]) {
-        categorizedDateIdeas[categoryKey] = [];
-    }
-
-    categorizedDateIdeas[categoryKey].push(idea);
-}
-
-console.log(categorizedDateIdeas);
-
-
+});
 
 module.exports = router;
-
-

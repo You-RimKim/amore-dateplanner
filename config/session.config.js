@@ -15,7 +15,6 @@ module.exports = app => {
   // required for the app when deployed to Heroku (in production)
   app.set('trust proxy', 1);
 
-  // use session
   app.use(
     session({
       secret: process.env.SESS_SECRET,
