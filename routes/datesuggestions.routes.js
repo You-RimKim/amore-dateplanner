@@ -15,27 +15,18 @@ router.post('/questionnaire', (req, res, next) => {
   }, { new: true })
   .then((updatedUser) => {
     const {
-    outdoor,
+    location,
     adventurelevel,
     budget,
     duration
   } = updatedUser.questionnaire
     console.log(updatedUser.questionnaire)
-    Ideas.find({ duration: duration })
-    .then((foundIdeas) => res.send(foundIdeas))
+    Ideas.find({ adventurelevel: adventurelevel, budget: budget, duration: duration })
+    .then((foundIdeas) => res.render('users/datesuggestions', {dateIdeas: foundIdeas}))
   })
 
+
 });
-
-
-
-router.post('/datesuggestions', (req, res, next) => {
-
-
-
-})
-
-
 
 
 
