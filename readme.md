@@ -1,6 +1,6 @@
 d'Amore Date Planner
 
-Click here to see deployed app
+https://nice-ruby-sea-urchin-tutu.cyclic.app/
 
 ## Description
     d'Amore is a date planner app, on which users can get inspiration for their next dates.
@@ -11,132 +11,111 @@ Click here to see deployed app
 
 
 ## MVP
-    - Users start on the welcome page and have different options to
-    
-    - The game starts with the welcome screen including instructions and a "Lets's eat!" (start game) button
-    - Player has the option to play background music by clicking on the audio icon on the top left side
-    - Player can move Nyancat in all directions with the arrow keys
-    - Food options will fall down from top of the gamescreen to the bottom
-    - Player can collect/consume the food items by colliding with them:
-        - If healthier food options are being collected, the score will increase
-        - If unhealthier food options are being collected, the lives will decrease
-    - Everytime the player collides with a food item, the size of Nyancat will increase, meaning the game difficulty will increase
-    - Further, everytime the player collides with a food item, a "Nom!" sound will be activated
-    - If the lives reach 0, the game over screen will appear and the game ends
-    - On the game over screen the player has the opportunity to play again by clicking the button "Try again"
-
+    - Users start on the welcome page and see different options on the right top:
+        - About us
+        - Signup
+        - Login
+        - Profile
+        - Date Ideas
+        - Logout
+    - About us tells the user about the backstory of this app.
+    - On Signup the user is asked to create a profile with an username, email address and password. All fields are required.
+    - On Login the user can log into the app and will be redirected to their Profile page.
+    - On the Profile page the user will be asked our their preferences.
+    - On Date Ideas all possible date ideas will be displayed after user has given their preferences.
+    - Via Logout the user will be redirected to the welcome page.
 
 ## Backlog Functionalities
     - Future possible features:
         - Saving favourite date ideas
         - Extending date idea data base
         - Adding more detailed descriptions about the date ideas
+        - Edit profile page
 
 
 ## Used Technologies
     - HTML
-    - CSS
+    - Handlebars HBS
+    - CSS Bootstrap
     - JavaScript
     - DOM Manipulation
-    - JS Classes
-    - JS Audio() and JS Image()
-    - CSS Bootstrap
-    - MongoDB and MongoDB Atlas Cloud
     - JS Express
+    - Node.js
+    - JS Image()
+    - Mongoose
+    - MongoDB and MongoDB Atlas Cloud
 
 
-## Data structure
-    - script.js
-        - icon.onclick();
-        - window.onload();
-        - startButton();
-        - restartButton();
-        - startGame();
-        - location.reload();
-        - handleKeydown();
-        - possibleKeystrokes.includes()
-        - event.preventDefault();
-        - window.addEventListener();
-    - game.js
-        - Game()
-            - this.startScreen;
-            - this.gameScreen;
-            - this.gameEndScreen;
-            - this.player;
-            - this.gameScreen;
-            - this.height;
-            - this.width;
-            - this.unhealthyFoods;
-            - this.healthyFoods;
-            - this.score;
-            - this.lives;
-            - this.scoreElement;
-            - this.livesElement;
-            - this.gameIsOver;
-        - start();
-        - gameLoop();
-        - update();
-        - endGame();
-    - nyancat.js
-        - Player()
-            - this.gameScreen;
-            - this.left;
-            - this.top;
-            - this.width;
-            - this.height;
-            - this.directionX;
-            - this.directionY;
-            - this.speedX;
-            - this.speedY;
-            - this.element = document.createElement("img");
-        - move();
-        - increaseSize();
-        - didCollideUnhealthy();
-        - didCollideHealthy();
-        - updatePosition();
-    - food.js
-        - Unhealthy()
-            - this.gameScreen;
-            - this.left;
-            - this.top;
-            - this.width;
-            - this.height;
-            - this.speed;
-            - this.element = document.createElement("img");
-        - move();
-        - updatePosition();
-        - Healthy()
-            - this.gameScreen;
-            - this.left;
-            - this.top;
-            - this.width;
-            - this.height;
-            - this.speed;
-            - this.element = document.createElement("img");
-        - move();
-        - updatePosition();
+## Folder & Data structure
+    - bin
+        - seedds.js
+    - config
+        - index.js
+        - session.config.js
+    - db
+        - index.js
+    - error-handling
+        - index.js
+    - middleware
+        - route-guard.js
+    - models
+        - Ideas.model.js
+        - User.model.js
+    - public
+        - images
+        - js
+            - script.js
+        - stylesheets
+            - style.css
+    - routes
+        - auth.routes.js
+        - datesuggestions.routes.js
+        - index.routes.js
+    - views
+        - auth 
+            - login.hbs
+            - signup.hbs
+        - partials
+            - questionnaire.hbs
+        - users
+            - datesuggestions.hbs
+            - user-profile.hbs
+        - about-us.hbs
+        - error.hbs
+        - index.hbs
+        - layout.hbs
+        - not-found.hbs
+    - app.js
+    - server.js
 
 
 ## States
-    - Start Screen with Instruction
-    - Game Screen
-    - Game Over Screen
+    - Welcome Screen 
+    - About Us Screen
+    - Sign Up Screen
+    - Login Screen
+    - Profile Page
+    - Date Ideas Page
 
 
 ## Ideal Task Order
-    - Wireframing and logic of game
-    - Basic HTML & CSS skeleton
+    - Sketching out the wireframes and logic of app 
+    - First route, views, models templates
+    - Assigning tasks and dividing works
+    - Installing all packages (npm express, bcryptjs, handlebars, etc.)
+    - First deployment
+    - Connecting the database
+    - Creating all files and connecting them
+    - Troubleshooting
     - Researching resources (images, videos and audio)
-    - Basic JavaScript set up (moving from screen to screen, game logic, food items falling down, Nyancat moving)
-    - Adding features (audio, increase of difficulty level, speed of food and Nyancat)
-    - Finalising design elements in Photoshop
+    - Styling (CSS Bootstrap)
 
 
 ## Links
     - Miro Board: https://miro.com/welcomeonboard/bGlHUzNGOEtDQzdrclNRNHU0N0J2cGw4R1JaTEtGeHZuSnBTekZ4R0I1Uk5JSWhOSXBmUWlFYXp2Y2Z6MU1CYnwzNDU4NzY0NTYzNDYxNDQ3MDY0fDI=?share_link_id=828491617158
     - Slides: Link
-    - Github Repository: Link
-    - Deployment: Link
+    - Github Repository: https://github.com/You-RimKim/amore-dateplanner
+    - Deployment: https://nice-ruby-sea-urchin-tutu.cyclic.app/
 
 
 ## Resources used:
