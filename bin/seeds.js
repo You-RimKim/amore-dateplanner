@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 const Ideas = require('../models/Ideas.model');
-const MONGO_URI = process.env.MONGODB_URI || 'mmongodb+srv://damore:VmTjhD5dzpFeLVpf@cluster0.f7ekpkp.mongodb.net/ideas';
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb+srv://damore:VmTjhD5dzpFeLVpf@cluster0.f7ekpkp.mongodb.net/ideas';
 
 const ideas = [
     {

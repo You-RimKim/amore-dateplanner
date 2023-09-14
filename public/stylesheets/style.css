@@ -1,11 +1,12 @@
 /* public/stylesheets/style.css */
 body {
   padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font: 14px 'Mooli',
+    sans-serif;
 }
 
 a {
-  color: #00b7ff;
+  color: #eabfef;
   text-decoration: none;
   font-size: 1.5em;
 }
@@ -34,13 +35,13 @@ form button {
 }
 
 form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
+  background: #eabfef;
+  border: 1px solid #eabfef;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -50,7 +51,7 @@ form button {
 
 form button:hover {
   background: #fff;
-  color: #43a3e6;
+  color: #9443e6;
   transition: 0.3s ease background;
 }
 
@@ -64,7 +65,7 @@ form button:hover {
 }
 
 ul {
-  border-bottom: 2px solid #43a3e6;
+  /* border-bottom: 2px solid #43a3e6; */
   height: 30px;
   padding: 1em 0;
   list-style-type: none;
@@ -80,7 +81,7 @@ ul li {
 }
 
 #to-right span {
-  color: #43a3e6;
+  color: #7c43e6;
   font-size: 1.5em;
 }
 
@@ -94,7 +95,7 @@ ul li {
 }
 
 #to-left p a {
-  color: #000;
+  color: #7c43e6;
   font-weight: bold;
   font-size: 2em;
 }
@@ -137,5 +138,3 @@ ul li {
   color: #000;
   cursor: pointer;
 }
-
-
