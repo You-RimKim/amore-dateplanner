@@ -1,15 +1,8 @@
-// :information_source: Gets access to environment variables/settings
-// https://www.npmjs.com/package/dotenv
 require("dotenv").config();
 
-// :information_source: Connects to the database
 require("./db");
-// Handles http requests (express is node js framework)
-// https://www.npmjs.com/package/express
-const express = require("express");
-// Handles the handlebars
-// https://www.npmjs.com/package/hbs
 
+const express = require("express");
 
 const hbs = require("hbs");
 const path = require("path");
@@ -21,14 +14,13 @@ app.set("views", path.join(__dirname, "views"));
 
 
 hbs.registerPartials(path.join(__dirname + "/views/partials"))
-// :information_source: This function is getting exported from the config folder. It runs most pieces of middleware
-require('./config')(app); // do not remove this!!!!!
+
+require('./config')(app);
 require('./config/session.config')(app);
-// default value for title local
+
 const projectName = "amore";
 app.locals.appTitle = `d'${(projectName)} Date Planner`;
 
-// :point_down: Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 
 
@@ -42,6 +34,6 @@ const dateSuggRouter = require("./routes/datesuggestions.routes");
 app.use("/", dateSuggRouter);
 
 
-// :exclamation: To handle errors. Routes that don't exist or errors that you handle in specific routes
+
 require("./error-handling")(app);
 module.exports = app;

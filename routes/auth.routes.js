@@ -12,7 +12,6 @@ const User = require('../models/User.model');
 
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard.js');
 
-// GET route ==> to display the signup form to users
 
 router.get('/signup', isLoggedOut, (req, res) => res.render('auth/signup'));
 
@@ -22,12 +21,7 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
 
 router.get('/login', (req, res) => res.render('auth/login'));
 
-// router.get('/datesuggestions', isLoggedIn, (req, res) => res.render('users/datesuggestions'));
-
-// POST route ==> to process form data
-
 router.post('/signup', (req, res, next) => {
-  // console.log("The form data: ", req.body);
 
   const { username, email, password } = req.body;
 
@@ -48,7 +42,7 @@ router.post('/signup', (req, res, next) => {
     .genSalt(saltRounds)
     .then(salt => bcryptjs.hash(password, salt))
     .then(hashedPassword => {
-      //console.log(`Password hash: ${hashedPassword}`);
+
       return User.create({
         username,
         email,
@@ -115,24 +109,8 @@ router.post('/logout', (req, res, next) => {
   });
 });
 
-
-
-//INPUT FROM USER QUESTIONNAIRE
-
-
-// Get route ==> to display questionnaire
-
 router.get('/questionnaire', (req, res) => {
   res.render('users/questionnaire-form');
 });
-
-
-// router.post('/questionnaire', (req, res) => {
-//   console.log(req.body)
-
-// });
-
-
-
 
 module.exports = router;

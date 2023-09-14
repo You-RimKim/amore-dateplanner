@@ -3,12 +3,9 @@ const User = require('../models/User.model');
 const express = require('express');
 const Ideas = require('../models/Ideas.model');
 const router = express.Router();
-//const uri = 'mongodb+srv://damore:VmTjhD5dzpFeLVpf@cluster0.f7ekpkp.mongodb.net/test.idea';
 
 router.post('/questionnaire', (req, res, next) => {
   console.log(req.body)
-  
-  // const { location, adventurelevel, budget, duration } = req.body;
 
   User.findByIdAndUpdate(req.session.currentUser._id, {
     questionnaire: req.body
@@ -27,8 +24,5 @@ router.post('/questionnaire', (req, res, next) => {
 
 
 });
-
-
-
 
 module.exports = router;
