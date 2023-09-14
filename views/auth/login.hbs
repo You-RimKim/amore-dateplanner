@@ -1,7 +1,6 @@
 {{!-- views/auth/login.hbs --}}
 
-<div id="form">
-  <h2>Login</h2>
+<div id="email-form">
 
   <form action="/login" method="POST">
 
@@ -16,7 +15,7 @@
     <button type="submit">Login</button>
 
     {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
+    <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>

@@ -111,6 +111,67 @@ ul {
 
 /* USER INPUT */
 
+
+
+main {
+  margin: 30px auto;
+  width: 10%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto;
+  gap: 50px;
+  font: 14px 'Mooli',
+      sans-serif;  text-align: right;
+}
+
+main div {
+  width: 100%;
+  max-width: 400px;
+}
+
+.heart-2 {
+  border: 2px solid #FF0000;
+  background: #fff;
+  position: relative;
+  padding: 10px 30px;
+}
+
+.heart-2:before {
+  content: '❤';
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: -28px;
+  left: -20px;
+  transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  text-shadow: 0 0 8px #FF0000, 0 0 6px #FF0000, 0 0 4px #FF0000, 0 0 2px #FF0000, 0 0 0.5px #FF0000;
+}
+
+.heart-2:after {
+  content: '❤';
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -20px;
+  right: -11px;
+  transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  text-shadow: 0 0 8px #FF0000, 0 0 6px #FF0000, 0 0 4px #FF0000, 0 0 2px #FF0000, 0 0 0.5px #FF0000;
+}
+
+.blur {
+  background-color: #CFFF8D;
+  box-shadow: 0px 0px 8px 8px #CFFF8D;
+  padding: 10px;
+}
+
 .radio-group {
   display: flex;
   align-items: center;
@@ -225,4 +286,35 @@ ul {
     opacity: 0;
     display: none;
   }
+}
+
+
+/* EMAIL FORM */
+
+#email-form {
+  padding: 10em;
+}
+
+
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #7c43e6;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5932af;
 }
