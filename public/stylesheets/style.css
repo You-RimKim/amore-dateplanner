@@ -113,7 +113,44 @@ ul {
 
 
 
+
 main {
+  margin: 30px auto;
+  max-width: 1000px;
+  /* Adjust the maximum width as needed */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Adjust column sizing as needed */
+  grid-gap: 30px;
+  /* Adjust the gap between grid items */
+  font: 14px 'Mooli', sans-serif;
+  text-align: left;
+  /* Change to 'left' if you want text alignment to the left */
+}
+
+/* Adjust individual section styles as needed */
+main .heart-2 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 1.5em;
+  color: #7c43e6;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.4;
+}
+
+
+
+/* main {
   margin: 30px auto;
   width: 10%;
   display: grid;
@@ -170,7 +207,7 @@ main div {
   background-color: #CFFF8D;
   box-shadow: 0px 0px 8px 8px #CFFF8D;
   padding: 10px;
-}
+} */
 
 .radio-group {
   display: flex;
