@@ -94,8 +94,10 @@ ul {
 
 #to-left p a {
   color: #7c43e6;
-  font-weight: bold;
-  font-size: 2em;
+    font-weight: bold;
+    font-size: 2.5em;
+    position: relative;
+    z-index: 2;
 }
 
 #logout-form {
@@ -147,6 +149,7 @@ ul {
   margin-right: auto;
   margin-top: -22%;
   transform: rotate(-40deg);
+  z-index: 1;
 }
 .con-like .like {
   position: absolute;
