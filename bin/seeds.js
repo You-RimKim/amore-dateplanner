@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Ideas = require('../models/Ideas.model');
 const MONGO_URI = process.env.MONGODB_URI || 'mmongodb+srv://damore:VmTjhD5dzpFeLVpf@cluster0.f7ekpkp.mongodb.net/ideas';
 
-const Ideas = [
+const ideas = [
     {
       dateIdea: "Picnic in the Park",
       location: "outdoor",
@@ -233,12 +233,5 @@ const Ideas = [
 ];
 
 
-mongoose
-  .connect(MONGO_URI)
-  .then(x => {
-    console.log(`Connected to Mongo database: "${x.connections[0].name}"`);
-  })
-  .catch(err => {
-    console.log(`An error occurred while creating books from the DB: ${err}`);
-  });
-  
+module.exports = ideas;
+
