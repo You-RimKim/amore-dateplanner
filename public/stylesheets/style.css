@@ -1,9 +1,18 @@
-/* public/stylesheets/style.css */
 body {
   padding: 50px;
   font: 14px 'Mooli',
     sans-serif;
 }
+
+/*video {
+  display: block;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}*/
 
 a {
   color: #eabfef;

@@ -1,5 +1,3 @@
-// bin/seeds.js
-
 const mongoose = require('mongoose');
 
 const Ideas = require('../models/Ideas.model');
