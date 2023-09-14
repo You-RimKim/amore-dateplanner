@@ -1,5 +1,3 @@
-// models/User.model.js
-
 const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema(
@@ -22,11 +20,11 @@ const userSchema = new Schema(
       type: String,
       required: [true, 'Password is required.']
     },
-    outdoor_or_indoor: {
+    location: {
       type: String,
       require: [true]
     },
-    adventure_level: {
+    adventurelevel: {
       type: String,
       require: [true]
     },
@@ -36,12 +34,14 @@ const userSchema = new Schema(
       require: [true]
     },
 
-    activity_duration: {
+    duration: {
       type: String,
       require: [true]
 
     },
-
+    questionnaire: {
+      
+    }
   },
   {
     timestamps: true
