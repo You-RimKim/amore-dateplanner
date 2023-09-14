@@ -5,6 +5,10 @@ body {
     sans-serif;
 }
 
+
+
+
+
 a {
   color: #eabfef;
   text-decoration: none;
@@ -385,4 +389,58 @@ button:hover {
 .reload-button a {
   text-decoration: none;
   color: inherit;
+}
+
+
+
+.main-heart {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  --radius: 80px;
+  --height: 200px;
+  --displacement: 2rem;
+  --aspect-ratio: 2/3;
+  --bg-from: pink;
+  --bg-to: #f472b6;
+}
+
+.heart {
+  height: var(--height);
+  aspect-ratio: var(--aspect-ratio);
+  transform: rotate(45deg);
+  background-color: var(--bg-from);
+  position: relative;
+  border-radius: var(--radius) var(--radius) 2px 2px;
+  animation: beat 5s infinite;
+}
+
+.heart:before {
+  content: "";
+  position: absolute;
+  height: var(--height);
+  aspect-ratio: var(--aspect-ratio);
+  transform: rotate(90deg);
+  background-color: inherit;
+  top: var(--displacement);
+  right: var(--displacement);
+  border-radius: 2px 2px var(--radius) var(--radius);
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1.5) rotate(45deg);
+    background-color: var(--bg-from);
+  }
+
+  50% {
+    transform: scale(1.25) rotate(45deg);
+    background-color: var(--bg-to);
+  }
+
+  100% {
+    transform: scale(1.5) rotate(45deg);
+    background-color: var(--bg-from);
+  }
 }
