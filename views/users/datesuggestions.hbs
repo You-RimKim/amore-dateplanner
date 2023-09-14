@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Suggestions</title>
-</head>
-<body>
-    <p>Here you can find all your personal date suggestions</p>
+{{#if userInSession}}
+<h2>Hi, {{ userInSession.username }}!</h2>
+<p>Here are your date ideas</p>
+<button>
+    <a href="/userProfile">Reload the page</a>
+</button>
+{{> categorizedDateIdeas}}
+{{else}}
 
-    <form id="new-dateideas-form" action="/datesuggestions" method="POST">
-        <button>Try other date ideas</button>
-    </form>
+<br>
+<p>You need to log in!</p>
 
-</body>
-</html>
+{{/if}}

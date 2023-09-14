@@ -130,19 +130,6 @@ router.get('/questionnaire', (req, res) => {
 router.post('/questionnaire', (req, res) => {
   console.log(req.body)
 
-  const {
-    outdoor_or_indoor,
-    adventure_level,
-    nightlife_type,
-    cuisine_preference,
-    activity_duration,
-    romantic_or_casual,
-    budget,
-    interests_hobbies,
-  } = req.body
-
-  
-
 });
 
 
