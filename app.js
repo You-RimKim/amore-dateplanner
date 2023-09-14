@@ -12,18 +12,23 @@ const express = require("express");
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
+const path = require("path");
 
 const app = express();
+
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
+
+hbs.registerPartials (path.join(__dirname + "/views/partials"))
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require('./config')(app); // do not remove this!!!!!
 require('./config/session.config')(app);
 
 // default value for title local
-const capitalize = require("./utils/capitalize");
 const projectName = "amore";
 
-app.locals.appTitle = `d'${capitalize(projectName)} Date Planner`;
+app.locals.appTitle = `d'${(projectName)} Date Planner`;
 
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");

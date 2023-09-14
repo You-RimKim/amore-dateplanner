@@ -115,7 +115,7 @@ router.post('/logout', (req, res, next) => {
   });
 });
 
-
+// 
 
 //INPUT FROM USER QUESTIONNAIRE
 
@@ -126,22 +126,8 @@ router.get('/questionnaire', (req, res) => {
   res.render('users/questionnaire-form');
 });
 
-
 router.post('/questionnaire', (req, res) => {
   console.log(req.body)
-
-  const {
-    outdoor_or_indoor,
-    adventure_level,
-    nightlife_type,
-    cuisine_preference,
-    activity_duration,
-    romantic_or_casual,
-    budget,
-    interests_hobbies,
-  } = req.body
-
-  
 
 });
 

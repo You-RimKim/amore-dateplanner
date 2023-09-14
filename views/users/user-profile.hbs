@@ -1,14 +1,12 @@
 {{!-- views/users/user-profile.hbs --}}
 
-{{!-- the new version, with the session: --}}
-
 {{#if userInSession}}
   <h2>Hi, {{ userInSession.username }}!</h2>
   <p>Are you ready for your next date?</p>
   <button>
     <a href="/userProfile">Reload the page</a>
   </button>
-  {{> questionnaire-form}}
+{{> questionnaire}}
 {{else}}
   
   <br><p>You need to log in!</p>
