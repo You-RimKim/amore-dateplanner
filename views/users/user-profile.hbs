@@ -1,13 +1,16 @@
+
+
+
 {{#if userInSession}}
-  <h2 class="h2-user">Hi, {{ userInSession.username }}!</h2>
-  <p class="date-text">Are you ready to plan your next date?</p>
-  {{!-- <button  class="reload-button">
-    <a href="/userProfile">Reload the page</a>
-  </button> --}}
-  {{> questionnaire}}
+<h2 class="h2-user">Hi, {{ userInSession.username }}!</h2>
+<p class="date-text">Are you ready to plan your next date?</p>
+{{!-- <button class="reload-button">
+  <a href="/userProfile">Reload the page</a>
+</button> --}}
+{{> questionnaire}}
 {{else}}
-  
-  <br><p>You need to log in!</p>
+
+<br>
+<p>You need to log in!</p>
 
 {{/if}}
-

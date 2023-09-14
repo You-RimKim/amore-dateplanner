@@ -195,6 +195,16 @@ main div {
   padding: 10px;
 }
 
+/* QUESTIONNAIRE  */
+
+
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  color: #7c43e6;
+}
+
 .radio-group {
   display: flex;
   align-items: center;
@@ -207,21 +217,37 @@ main div {
   -moz-appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #000;
+  border: 2px solid #7c43e6;
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
+  flex-shrink: 0;
+  /* Prevent radio buttons from affecting label placement */
 }
 
-.radio-group input[type="radio"]:checked {
-  background-color: #00eb27;
+.radio-group input[type="radio"]:checked+label {
+  background-color: #eabfef;
 }
 
 .radio-group label {
-  font-size: 16px;
+  font-size: 15px;
   color: #000;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-transform: capitalize;
 }
+
+.radio-group label::after {
+  /* content: "?"; */
+  margin-left: 5px;
+}
+
+.question {
+  font-size: 1.3em;
+}
+
 
 /* HEART */
 
