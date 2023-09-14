@@ -232,14 +232,15 @@ main div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .radio-group label::after {
   /* content: "?"; */
   margin-left: 5px;
 }
-.question{
+
+.question {
   font-size: 1.3em;
 }
 
