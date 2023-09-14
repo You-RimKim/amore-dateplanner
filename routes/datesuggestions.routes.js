@@ -3,7 +3,6 @@ const router = express.Router();
 
 router.get('/datesuggestions', (req, res) => res.render('users/datesuggestions'));
 
-
 const Ideas = require('../bin/seeds');
 
 const categorizedDateIdeas = {};
