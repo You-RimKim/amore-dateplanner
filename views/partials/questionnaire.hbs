@@ -1,0 +1,66 @@
+<main id="questionnaire">
+<div class="input-form">
+  <div class="heart-2">
+    <div class="title">Choose your preferences</div>
+    <form action="/questionnaire" id="questionnaireForm" method="post">
+      <div class="question">
+        <p>Do you want to stay indoor or outdoor?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="indoor" value="Indoor">
+          <label for="Indoor">Indoor</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="outdoor" value="Outdoor">
+          <label for="Outdoor">Outdoor</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>How adventurous are you feeling today?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventurelevel" value="Not at all">
+          <label for="Not-at-all">Not at all</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventurelevel" value="Somewhat">
+          <label for="somewhat">Somewhat</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="adventurelevel" value="Very">
+          <label for="Very">Very</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>What's your preferred budget range for this date?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget" value="Low">
+          <label for="Low">Low</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget" value="Medium">
+          <label for="Medium">Medium</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="budget" value="High">
+          <label for="High">High</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>How long would you like the date to last?</p>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="duration" value="Couple of hours">
+          <label for="Couple-of-hours">Couple of hours</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="duration" value="Half a day">
+          <label for="Half-a-day">Half a day</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" class="input-radio" name="duration" value="Weekend">
+          <label for="Weekend">Weekend</label>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+</main>

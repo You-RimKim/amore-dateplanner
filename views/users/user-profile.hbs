@@ -1,15 +1,27 @@
-{{!-- views/users/user-profile.hbs --}}
 
-{{!-- the new version, with the session: --}}
+
 
 {{#if userInSession}}
-  <h2>Hi, {{ userInSession.username }}!</h2>
-  <p>Are you ready for your next date?</p>
-  <button>
-    <a href="/userProfile">Reload the page</a>
-  </button>
-{{else}}
+<h2 class="h2-user">Hi, {{ userInSession.username }}!</h2>
+<div class="edit-user">
   
-  <br><p>You need to log in!</p>
+    <h3 class="personal-data">Your personal data</h3>
+    <h4>Username: {{userInSession.username}}</h4>
+    <h4>Email: {{userInSession.email}}</h4>
+    <h4>Password: {{userInSession.hashedPassword}}</h4>
+    
+<a href="/users/{{userInSession._id}}/edit" id="button">Edit</a>
+    </div>
+
+<p class="date-text">Are you ready to plan your next date?</p>
+{{!-- <button class="reload-button">
+  <a href="/userProfile">Reload the page</a>
+</button> --}}
+{{> questionnaire}}
+
+{{else}}
+
+<br>
+<p>You need to log in!</p>
 
 {{/if}}
