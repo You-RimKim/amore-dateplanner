@@ -11,7 +11,14 @@
     <h4>Password: {{userInSession.hashedPassword}}</h4>
     
 <a href="/users/{{userInSession._id}}/edit" id="button">Edit</a>
+
     </div>
+
+    <form action="/users/{{userInSession._id}}/delete" method="POST">
+      <button>Delete</button>
+    </form>
+
+    
 
 <p class="date-text">Are you ready to plan your next date?</p>
 {{!-- <button class="reload-button">
