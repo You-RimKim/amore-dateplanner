@@ -7,8 +7,8 @@ body {
   padding: 50px;
   font: 14px 'Mooli',
     sans-serif;
-  /* background-image: linear-gradient(rgba(255, 192, 203, 0.5), rgba(255, 192, 203, 0.5)), url('../images/blurred-pop-abstract-background-pink.jpg'); */
   backdrop-filter: blur(20px);
+  background-color: rgba(255, 192, 203, 0.2);
 }
 
 
@@ -424,7 +424,6 @@ button:hover {
 .about-use-h1 {
   color: #7c43e6;
   padding: 1em;
-  text-decoration: underline;
 }
 
 .h2-user {
@@ -467,8 +466,8 @@ button:hover {
 
 
 .text-container {
-position: absolute;
-  width: 40%;
+  position: absolute;
+  width: 45%;
   top: 55%;
   left: 50%;
   z-index: 1;
@@ -476,10 +475,9 @@ position: absolute;
 }
 
 .text {
-  font-size: 35px;
+  font-size: 45px;
   color: #9443e6;
-  letter-spacing: 5px
-;
+  letter-spacing: 5px;
 }
 
 .main-heart {
@@ -553,3 +551,6 @@ position: absolute;
   text-decoration: underline;
   color: #dd5dec;
 }
+
+
+
