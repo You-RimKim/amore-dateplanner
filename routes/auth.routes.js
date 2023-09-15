@@ -121,6 +121,15 @@ router.post("/users/:userId/edit", (req, res, next) => {
     .catch((error) => next(error));
 });
 
+// POST route to delete a book from the database
+router.post("/users/:userId/delete", (req, res, next) => {
+  const { userId } = req.params;
+
+  User.findByIdAndDelete(userId)
+    .then(() => res.redirect("/"))
+    .catch((error) => next(error));
+});
+
 router.get("/users", (req, res, next) => {
   User.find()
     .then((userFromDB) => {
