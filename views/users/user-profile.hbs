@@ -3,12 +3,15 @@
 
 {{#if userInSession}}
 <h2 class="h2-user">Hi, {{ userInSession.username }}!</h2>
-
-    <h3>Your personal data</h3>
+<div class="edit-user">
+  
+    <h3 class="personal-data">Your personal data</h3>
     <h4>Username: {{userInSession.username}}</h4>
     <h4>Email: {{userInSession.email}}</h4>
     <h4>Password: {{userInSession.hashedPassword}}</h4>
-    <a href="/users/{{userInSession._id}}/edit">Edit</a>
+    
+<a href="/users/{{userInSession._id}}/edit" id="button">Edit</a>
+    </div>
 
 <p class="date-text">Are you ready to plan your next date?</p>
 {{!-- <button class="reload-button">
