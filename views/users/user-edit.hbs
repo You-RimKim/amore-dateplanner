@@ -1,16 +1,16 @@
 <h2>Edit your data:</h2>
 
-<form action="/users/{{users._id}}/edit" method="post">
+<form action="/users/{{userInSession._id}}/edit" method="post">
   <label> Username:
-    <input type="text" name="username" value="{{users.username}}" />
+    <input type="text" name="username" value="{{userInSession.username}}" />
   </label>
 
   <label> Email:
-    <input type="email" name="email" value="{{users.email}}" />
+    <input type="email" name="email" value="{{userInSession.email}}" />
   </label>
 
   <label> Password:
-    <input type="password" name="password" value="{{users.passwordHash}}" />
+    <input type="password" name="password" value="{{userInSession.passwordHash}}" />
   </label>
 
   <button>Save changes</button>

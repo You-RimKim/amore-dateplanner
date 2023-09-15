@@ -100,12 +100,12 @@ router.post('/login', (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.get("7users/:userId/edit", (req, res, next) => {
+router.get("/users/:userId/edit", (req, res, next) => {
   const { userId } = req.params;
 
   User.findById(userId)
     .then((userToEdit) => {
-      res.render("user-edit.hbs", { user: userToEdit });
+      res.render("users/user-edit.hbs", { userInSession: userToEdit });
     })
     .catch((error) => next(error));
 });
@@ -117,14 +117,14 @@ router.post("/users/:userId/edit", (req, res, next) => {
   User.findByIdAndUpdate(
     userId, 
     { username, email, password }, { new: true })
-    .then((updatedUser) => res.redirect(`/users/${updatedUser.id}`))
+    .then((updatedUser) => res.render(`/users/${updatedUser._id}/edit`))
     .catch((error) => next(error));
 });
 
 router.get("/users", (req, res, next) => {
   User.find()
     .then((userFromDB) => {
-      res.render("users/user-profile.hbs", { users: userFromDB });
+      res.render("users/user-profile.hbs", { userInSession: userFromDB });
     })
     .catch((error) => {
       console.log("Error while getting the user from the DB: ", error);
@@ -137,7 +137,7 @@ router.get("/users/:userId", (req, res, next) => {
   const { userId } = req.params;
 
   User.findById(userId)
-    .then((theUser) => res.render("users/user-profile.hbs", { user: theUser }))
+    .then((theUser) => res.render("users/user-profile.hbs", { userInSession: theUser }))
     .catch((error) => {
       console.log("Error while retrieving user details: ", error);
       next(error);
