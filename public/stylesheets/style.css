@@ -1,9 +1,17 @@
 /* public/stylesheets/style.css */
+
+
+
+
 body {
   padding: 50px;
   font: 14px 'Mooli',
     sans-serif;
+  /* background-image: linear-gradient(rgba(255, 192, 203, 0.5), rgba(255, 192, 203, 0.5)), url('../images/blurred-pop-abstract-background-pink.jpg'); */
+  backdrop-filter: blur(20px);
 }
+
+
 
 
 
@@ -418,12 +426,31 @@ button:hover {
 }
 
 
+.text-container {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  top: 30%;
+  left: 40%;
+  transform: translate(-30%, -10%);
+  z-index: 1;
+}
+
+.text {
+  font-size: 40px;
+  color: #9443e6;
+  text-shadow:
+    3px 3px 0 #9443e6,
+    -1px -1px 0 #ec67dc,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 .main-heart {
   display: flex;
-  min-height: 100vh;
+  min-height: 80vh;
   align-items: center;
-  justify-content: center;
+  ;
+  justify-content: end;
   --radius: 80px;
   --height: 200px;
   --displacement: 2rem;
