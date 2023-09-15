@@ -113,7 +113,7 @@ https://nice-ruby-sea-urchin-tutu.cyclic.app/
 
 ## Links
     - Miro Board: https://miro.com/welcomeonboard/bGlHUzNGOEtDQzdrclNRNHU0N0J2cGw4R1JaTEtGeHZuSnBTekZ4R0I1Uk5JSWhOSXBmUWlFYXp2Y2Z6MU1CYnwzNDU4NzY0NTYzNDYxNDQ3MDY0fDI=?share_link_id=828491617158
-    - Slides: Link
+    - Slides: https://www.canva.com/design/DAFuf8_w5bY/on7BgnmsGTQew-0bovqHrA/view?utm_content=DAFuf8_w5bY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
     - Github Repository: https://github.com/You-RimKim/amore-dateplanner
     - Deployment: https://nice-ruby-sea-urchin-tutu.cyclic.app/
 
