@@ -13,21 +13,6 @@ body {
 
 
 
-
-
-
-}
-
-/*video {
-  display: block;
-  object-fit: fill;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}*/
-
 a {
   color: #eabfef;
   text-decoration: none;
@@ -178,6 +163,22 @@ main div {
   padding: 10px 30px;
 }
 
+.ideas-container {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heart-3 {
+  border: 2px solid #FF0000;
+  background: #fff;
+  position: absolute;
+  padding: 10px 30px;
+}
+
 .heart-2:before {
   content: '❤';
   color: #FFF;
@@ -221,6 +222,12 @@ main div {
 .title {
   text-align: center;
   font-size: 2em;
+  color: #7c43e6;
+}
+
+.date-title {
+  text-align: center;
+  font-size: 1.4em;
   color: #7c43e6;
 }
 
@@ -388,6 +395,29 @@ button:hover {
   background-color: #5932af;
 }
 
+#button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #eabfef;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button:hover {
+  background: #fff;
+  color: #9443e6;
+  transition: 0.3s ease background;
+}
+
 
 /* ABOUT US */
 
@@ -401,7 +431,6 @@ button:hover {
   color: #7c43e6;
   margin-top: 2em;
   margin-left: 1em;
-  text-decoration: underline;
   font-size: 2em;
 }
 
@@ -438,22 +467,19 @@ button:hover {
 
 
 .text-container {
-  position: absolute;
-  width: 30px;
-  height: 10px;
-  top: 30%;
-  left: 40%;
-  transform: translate(-30%, -10%);
+position: absolute;
+  width: 40%;
+  top: 55%;
+  left: 50%;
   z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .text {
-  font-size: 40px;
+  font-size: 35px;
   color: #9443e6;
-  text-shadow:
-    3px 3px 0 #9443e6,
-    -1px -1px 0 #ec67dc,
-    0 0 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 5px
+;
 }
 
 .main-heart {
@@ -507,4 +533,23 @@ button:hover {
     transform: scale(1.5) rotate(45deg);
     background-color: var(--bg-from);
   }
+}
+
+
+/* USER */
+.edit-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: 2px dashed #eabfef;
+  border-radius: 10px;
+  padding: 10px;
+  color: #dd5dec;
+}
+
+.personal-data {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #dd5dec;
 }

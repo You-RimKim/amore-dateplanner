@@ -1,13 +1,16 @@
-<h1>Date Suggestions</h1>
-
-<ul>
-  {{#each dateIdeas}}
-  <li>
-    <h2>{{this.dateIdea}}</h2>
-    <p>Location: {{this.location}}</p>
-    <p>Adventure Level: {{this.adventurelevel}}</p>
-    <p>Budget: {{this.budget}}</p>
-    <p>Duration: {{this.duration}}</p>
-  </li>
-  {{/each}}
-</ul>
+<div class="date-title">
+  <h1>Date Suggestions</h1>
+</div>
+<div class="ideas-container">
+  <ul class="heart-2">
+    {{#each dateIdeas}}
+    <li>
+      <h2 class="heart-2 ">{{this.dateIdea}}</h2>
+      <p class="heart-2 ">Location: {{this.location}}</p>
+      <p class="heart-2 "> Adventure Level: {{this.adventurelevel}}</p>
+      <p class="heart-2 ">Budget: {{this.budget}}</p>
+      <p class="heart-2 ">Duration: {{this.duration}}</p>
+    </li>
+    {{/each}}
+  </ul>
+  </div>

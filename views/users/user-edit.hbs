@@ -1,6 +1,10 @@
-<h2>Edit your data:</h2>
+
+
+
+<h2 class="h2-user">Edit your data:</h2>
 
 <form action="/users/{{userInSession._id}}/edit" method="post">
+<div class="edit-user">
   <label> Username:
     <input type="text" name="username" value="{{userInSession.username}}" />
   </label>
@@ -12,6 +16,7 @@
   <label> Password:
     <input type="password" name="password" value="{{userInSession.passwordHash}}" />
   </label>
+  </div>
 
   <button>Save changes</button>
 </form>
